@@ -1,22 +1,11 @@
-/*
- * stmnts-03.js
- * Language: javascript
- * Test: tests/stmnts-03.tests.js
- * Path: src/stmnts-03.js
- * Arithmetic Expressions
- * [JavaScript: The Definitive Guide, Chapter 4.8](https://bit.ly/2Z30rSk)
- */
-
 /**
  * Calculates the perimeter of the rectangle rounded to 2 decimal places
  * @param {number} width - the width of the rectangle
  * @param {number} height - the height of the rectangle
  * @returns {number} - the perimeter of the rectangle rounded to 2 decimal places
- *
  */
-
 function rectanglePerimeter(width, height) {
-  // write your code here & return
+  return (2 * width + 2 * height).toFixed(2);
 }
 
 /**
@@ -24,10 +13,9 @@ function rectanglePerimeter(width, height) {
  * @param {number} width - the width of the rectangle
  * @param {number} height - the height of the rectangle
  * @returns {number} - the area of the rectangle rounded to 2 decimal places
- *
  */
 function rectangleArea(width, height) {
-  // write your code here & return
+  return (width * height).toFixed(2);
 }
 
 /**
@@ -41,7 +29,7 @@ function rectangleArea(width, height) {
  * Hint: use toFixed()
  */
 function circleCircumference(radius) {
-  // write your code here & return
+  return (2 * Math.PI * radius).toFixed(2);
 }
 
 /**
@@ -51,7 +39,7 @@ function circleCircumference(radius) {
  * @returns {number} - the area of the circle rounded to 2 decimal places
  */
 function circleArea(radius) {
-  // write your code here & return
+  return (Math.PI * radius ** 2).toFixed(2);
 }
 
 /**
@@ -63,7 +51,7 @@ function circleArea(radius) {
  * @returns {number} - the area of the triangle rounded to 2 decimal places
  */
 function triangleArea(base, height) {
-  // write your code here & return
+  return ((base * height) / 2).toFixed(2);
 }
 
 /**
@@ -74,7 +62,7 @@ function triangleArea(base, height) {
  * @returns {number} - the hypotenuse of the triangle rounded to 2 decimal places
  */
 function pythagorean(sideA, sideB) {
-  // write your code here & return
+  return Math.sqrt(sideA ** 2 + sideB ** 2).toFixed(2);
 }
 
 module.exports = {
