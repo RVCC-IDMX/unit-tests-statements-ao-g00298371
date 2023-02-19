@@ -13,7 +13,7 @@
  * ? [JavaScript: The Definitive Guide, Chapter 4.10](https://bit.ly/39lbxnK)
  */
 function logicalAnd(a, b) {
-  // write your code here & return
+  return a && b;
 }
 
 /**
@@ -23,7 +23,7 @@ function logicalAnd(a, b) {
  * @returns {boolean} - true if a or b is truthy, false if both are falsy
  */
 function logicalOr(a, b) {
-  // write your code here & return
+  return a || b;
 }
 
 /**
@@ -32,7 +32,7 @@ function logicalOr(a, b) {
  * @returns {boolean} - the opposite of the given boolean
  */
 function invertBoolean(bool) {
-  // write your code here & return
+  return !bool;
 }
 
 /**
@@ -49,8 +49,17 @@ function invertBoolean(bool) {
  * ? [JavaScript: The Definitive Guide, Chapter 5.4.3](https://bit.ly/39hrIlW)
  */
 function numberOfOdds(num) {
-  // write your code here & return
+  let count = 0;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < num; i++) {
+    if (i % 2 !== 0) {
+      // eslint-disable-next-line no-plusplus
+      count++;
+    }
+  }
+  return count;
 }
+// This section was acting weird for some reason, had to use ESLint to deal with plusplus.
 
 /**
  * Calculates the sum of all the numbers from 0 to num (inclusive)
@@ -97,7 +106,7 @@ function gradeGenerator(score) {
  * ? return a string written like:
  * ? Francine got an A
  * ? David got a B
- * ? note: you have to use English grammar's correct indefinite article 
+ * ? note: you have to use English grammar's correct indefinite article
  * ? it's 'an A' (not a A) and 'an F' (not a F)
  */
 function getGrade(name, score) {
