@@ -21,6 +21,9 @@ function isString(str) {
  * @returns {boolean}  - true if str is blank (empty)
  */
 function isBlank(str) {
+  if (typeof str !== 'string') {
+    throw new Error('Input must be a string');
+  }
   return str.trim() === '';
 }
 
