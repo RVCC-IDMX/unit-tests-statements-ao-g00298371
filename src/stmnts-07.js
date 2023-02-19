@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 /*
  * stmnts-07.js
  * Language: javascript
@@ -71,7 +72,12 @@ function numberOfOdds(num) {
  * ? For example, num is 4 then return 10 because 1 + 2 + 3 + 4 = 10.
  */
 function addUpTheNumbers(num) {
-  // write your code here & return
+  let sum = 0;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -90,7 +96,16 @@ function addUpTheNumbers(num) {
  * ?
  */
 function gradeGenerator(score) {
-  // write your code here & return
+  if (score < 60) {
+    return 'F';
+  } if (score < 70) {
+    return 'D';
+  } if (score < 80) {
+    return 'C';
+  } if (score < 90) {
+    return 'B';
+  }
+  return 'A';
 }
 
 /**
@@ -110,8 +125,27 @@ function gradeGenerator(score) {
  * ? it's 'an A' (not a A) and 'an F' (not a F)
  */
 function getGrade(name, score) {
-  // write your code here & return
+  const grade = gradeGenerator(score);
+  let article = 'a';
+
+  if (grade === 'A' || grade === 'F') {
+    article = 'an';
+  }
+
+  return `${name} got ${article} ${grade}`;
 }
+
+/**
+ * Calculates the sum of all the numbers from 0 to num (inclusive)
+ * @param {number} num - the number to add up to
+ * @returns {number} - the sum of all numbers from 0 to num
+ * ? num is a positive integer greater than 0
+ * ? this required to be a for loop
+ * ? using a for loop from 0 to num, iterating by 1
+ * ? For example, num is 4 then return 10 because 1 + 2 + 3 + 4 = 10.
+ */
+
+// Duplicate question. Was causing problems in ESLint.
 
 module.exports = {
   logicalAnd,
