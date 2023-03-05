@@ -5,7 +5,7 @@
  * @returns {number} - the perimeter of the rectangle rounded to 2 decimal places
  */
 function rectanglePerimeter(width, height) {
-  return (2 * width + 2 * height).toFixed(2);
+  return +(2 * width + 2 * height).toFixed(2);
 }
 
 /**
@@ -15,7 +15,7 @@ function rectanglePerimeter(width, height) {
  * @returns {number} - the area of the rectangle rounded to 2 decimal places
  */
 function rectangleArea(width, height) {
-  return (width * height).toFixed(2);
+  return +(width * height).toFixed(2);
 }
 
 /**
@@ -29,7 +29,7 @@ function rectangleArea(width, height) {
  * Hint: use toFixed()
  */
 function circleCircumference(radius) {
-  return (2 * Math.PI * radius).toFixed(2);
+  return +(2 * Math.PI * radius).toFixed(2);
 }
 
 /**
@@ -39,7 +39,7 @@ function circleCircumference(radius) {
  * @returns {number} - the area of the circle rounded to 2 decimal places
  */
 function circleArea(radius) {
-  return (Math.PI * radius ** 2).toFixed(2);
+  return +(Math.PI * radius ** 2).toFixed(2);
 }
 
 /**
@@ -51,7 +51,7 @@ function circleArea(radius) {
  * @returns {number} - the area of the triangle rounded to 2 decimal places
  */
 function triangleArea(base, height) {
-  return ((base * height) / 2).toFixed(2);
+  return +((base * height) / 2).toFixed(2);
 }
 
 /**
@@ -62,7 +62,7 @@ function triangleArea(base, height) {
  * @returns {number} - the hypotenuse of the triangle rounded to 2 decimal places
  */
 function pythagorean(sideA, sideB) {
-  return Math.sqrt(sideA ** 2 + sideB ** 2).toFixed(2);
+  return +(Math.sqrt(sideA ** 2 + sideB ** 2).toFixed(2));
 }
 
 module.exports = {
